@@ -1,0 +1,32 @@
+<h1>Register</h1>
+
+<%= @firstname %>
+<%= @lastname %>
+<%= @email %>
+
+<%= form_tag register_path do %>
+
+    <div>
+        <%= label_tag "First Name" %>
+        <%= text_field_tag :first_name %>
+    </div>
+    <div>
+        <%= label_tag "Last Name" %>
+        <%= text_field_tag :last_name %>
+    </div>
+    <div>
+        <%= label_tag "Email" %>
+        <%= text_field_tag :email %>
+    </div>
+    <div>
+        <%= label_tag "Password" %>
+        <%= password_field_tag :password %>
+    </div>
+    <div>
+        <%= label_tag "Confirm Password" %>
+        <%= password_field_tag :confirm_password %>
+    </div>
+
+    <%= submit_tag "Register" %>
+<% end %>
+
