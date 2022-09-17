@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Index:</strong>
+  <%= @attendance.index %>
+</p>
+
+<p>
+  <strong>Memid:</strong>
+  <%= @attendance.memID %>
+</p>
+
+<p>
+  <strong>Eventid:</strong>
+  <%= @attendance.eventID %>
+</p>
+
+<%= link_to 'Edit', edit_attendance_path(@attendance) %> |
+<%= link_to 'Back', attendances_path %>
