@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Answerid:</strong>
+  <%= @answer.answerID %>
+</p>
+
+<p>
+  <strong>Memid:</strong>
+  <%= @answer.memID %>
+</p>
+
+<p>
+  <strong>Questionid:</strong>
+  <%= @answer.questionID %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @answer.answer %>
+</p>
+
+<%= link_to 'Edit', edit_answer_path(@answer) %> |
+<%= link_to 'Back', answers_path %>
