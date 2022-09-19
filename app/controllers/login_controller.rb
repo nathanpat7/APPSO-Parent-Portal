@@ -9,7 +9,10 @@ class LoginController < ApplicationController
         # Password is params[:password]
         p params[:email]
         p params[:password]
-
-        redirect_to action: :index
+        if Member.where(:email => params[:email], :notes => params[:password]).blank? 
+            redirect_to '/login'
+        else
+            redirect_to '/home/index'
+        end
     end
 end
