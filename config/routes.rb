@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :events
   resources :officer_notes
   resources :attendances
@@ -6,7 +7,7 @@ Rails.application.routes.draw do
   resources :members
   resources :questions
   get 'home/index'
-
+  root 'home#index'
   # register routes
   get 'register' => 'registration#index'
   post 'register' => 'registration#create'
