@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Officer Notes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Memid</th>
+      <th>Pcomplete</th>
+      <th>Ranking</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @officer_notes.each do |officer_note| %>
+      <tr>
+        <td><%= officer_note.memID %></td>
+        <td><%= officer_note.pComplete %></td>
+        <td><%= officer_note.ranking %></td>
+        <td><%= officer_note.notes %></td>
+        <td><%= link_to 'Show', officer_note %></td>
+        <td><%= link_to 'Edit', edit_officer_note_path(officer_note) %></td>
+        <td><%= link_to 'Destroy', officer_note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Officer Note', new_officer_note_path %>

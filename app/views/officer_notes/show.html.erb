@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Memid:</strong>
+  <%= @officer_note.memID %>
+</p>
+
+<p>
+  <strong>Pcomplete:</strong>
+  <%= @officer_note.pComplete %>
+</p>
+
+<p>
+  <strong>Ranking:</strong>
+  <%= @officer_note.ranking %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @officer_note.notes %>
+</p>
+
+<%= link_to 'Edit', edit_officer_note_path(@officer_note) %> |
+<%= link_to 'Back', officer_notes_path %>
